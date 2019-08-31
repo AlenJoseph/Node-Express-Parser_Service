@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha",
+    "docker": "docker-compose up --build ",
+    "test": "sleep 30 && mocha",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
