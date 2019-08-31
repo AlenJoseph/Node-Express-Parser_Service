@@ -9,7 +9,7 @@ const User = require('../../model/User');
 // @desc    Test users route
 // @acess   Public
 router.get('/test', (req, res) => {
-  res.send({ msg: 'it works' });
+  res.status(200).json({ msg: 'success' });
 });
 
 module.exports = router;
