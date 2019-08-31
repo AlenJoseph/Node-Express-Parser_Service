@@ -1,4 +1,3 @@
 module.exports = {
-  mongoURI:
-    'mongodb+srv://xxx'
+  mongoURI: 'mongodb://mongo:27017/db'
 };
