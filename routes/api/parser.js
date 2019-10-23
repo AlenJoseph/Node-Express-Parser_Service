@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const workingDirPath = '/home/alen/Desktop/workdir';
+const workingDirPath = '/home/alen/Desktop/workdir/node';
 const simpleGit = require('simple-git')(workingDirPath);
 const fs = require('fs');
 //Load User model
