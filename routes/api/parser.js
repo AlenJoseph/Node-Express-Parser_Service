@@ -55,7 +55,7 @@ router.post('/test', (req, res) => {
 });
 
 router.post('/demo', (req, res) => {
-  nrc.run(['cd /home/alen/Desktop/workdir/node/', 'node ']);
+  nrc.run(['git init', 'git add . ', 'git commit -m "updated"', 'git push']);
 
   const USER = 'AlenJoseph';
   const PASS = 'Iamnotcarzy123';
