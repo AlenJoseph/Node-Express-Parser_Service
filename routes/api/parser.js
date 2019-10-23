@@ -55,15 +55,19 @@ router.post('/test', (req, res) => {
 });
 
 router.post('/demo', (req, res) => {
-  nrc.run(['git init', 'git add . ', 'git commit -m "updated"', 'git push']);
-
   const USER = 'AlenJoseph';
   const PASS = 'Iamnotcarzy123';
   const REPO = 'github.com/AlenJoseph/NodeTutotial.git';
 
   const git = require('simple-git/promise');
   const remote = `https://${USER}:${PASS}@${REPO}`;
-
+  nrc.run([
+    'git init',
+    'git add . ',
+    'git commit -m "updated"',
+    `git remote add origin ${remote}`,
+    'git push'
+  ]);
   // git()
   //   .silent(true)
   //   .clone(remote, '/home/alen/Desktop/workdir/node')
