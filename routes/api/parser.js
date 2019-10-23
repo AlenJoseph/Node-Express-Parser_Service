@@ -3,6 +3,7 @@ const router = express.Router();
 const workingDirPath = '/home/alen/Desktop/workdir/node';
 const simpleGit = require('simple-git')(workingDirPath);
 const fs = require('fs');
+var nrc = require('node-run-cmd');
 //Load User model
 
 const Parser = require('../../model/Parser');
@@ -54,6 +55,8 @@ router.post('/test', (req, res) => {
 });
 
 router.post('/demo', (req, res) => {
+  nrc.run(['cd /home/alen/Desktop/workdir/node/', 'node ']);
+
   const USER = 'AlenJoseph';
   const PASS = 'Iamnotcarzy123';
   const REPO = 'github.com/AlenJoseph/NodeTutotial.git';
@@ -66,8 +69,9 @@ router.post('/demo', (req, res) => {
   //   .clone(remote, '/home/alen/Desktop/workdir/node')
   //   .then(() => console.log('finished'))
   //   .catch(err => console.error('failed: ', err));
+
   require('simple-git')()
-    .init('/home/alen/Desktop/workdir/')
+    .init()
     .add('./*')
     .commit('first commit!')
     .addRemote('origin', remote)
