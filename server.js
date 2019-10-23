@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 // route declaration
-const users = require('./routes/api/users');
+const parse = require('./routes/api/parser');
 // routes
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,7 +21,7 @@ mongoose
 
 // Users Routes
 app.use(cors());
-app.use('/api/users', users);
+app.use('/api/parser', parse);
 
 const port = process.env.PORT || 5000;
 
