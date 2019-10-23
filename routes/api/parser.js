@@ -67,7 +67,7 @@ router.post('/demo', (req, res) => {
   //   .then(() => console.log('finished'))
   //   .catch(err => console.error('failed: ', err));
   require('simple-git')()
-    .init()
+    .init('/home/alen/Desktop/workdir/')
     .add('./*')
     .commit('first commit!')
     .addRemote('origin', remote)
