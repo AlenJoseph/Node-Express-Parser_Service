@@ -11,9 +11,6 @@ const ComponentSchema = new Schema({
   git_url: {
     type: String,
     required: true
-  },
-  docker_compose_data: {
-    type: String
   }
 });
 
